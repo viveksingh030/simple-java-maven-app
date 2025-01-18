@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '/opt/maven/mvn -B -DskipTests clean package'
+                sh '/opt/maven/bi/mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
-                sh '/opt/maven/mvn test'
+                sh '/opt/maven/bin/mvn test'
             }
             post {
                 always {
